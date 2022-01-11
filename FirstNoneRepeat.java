@@ -18,6 +18,9 @@ public class FirstNoneRepeat {
             char first = s.charAt(i);
             char second = s.charAt(i+1);
             if (first != second){
+                //i+2 doesnt throw error if at the end of string as 
+                //i == s.length() - 2 will evaluate to false first and
+                //the second statement will not be evaluated
                 if (i == s.length() - 2 || second != s.charAt(i+2)){
                     firstNoneRepeatCharacter = second;
                     break;
