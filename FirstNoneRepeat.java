@@ -1,8 +1,13 @@
+import java.util.*;
+
 public class FirstNoneRepeat {
 
     public static void main(String ...args){
         System.out.println("This program will identify the first none repeated character for a user entered String");
-        repeatCharacterCheck("aabbcch");
+        System.out.println("Please enter a sequence of characters");
+        String input = getInput();
+        repeatCharacterCheck(input);
+        System.out.println("Program has ended");
     }
 
     static void repeatCharacterCheck(String s){
@@ -26,6 +31,11 @@ public class FirstNoneRepeat {
             System.out.println("The first none repeating character is " + firstNoneRepeatCharacter);
         }
 
+    }
+
+    static String getInput(){
+        Scanner input = new Scanner(System.in);
+        return input.next().trim();
     }
     
 }
